@@ -42,12 +42,11 @@ public final class SwiftInteropBridge: NSObject {
   ) {
     registry
       .get(moduleHolderForName: moduleName)?
-      .call(function: functionName, args: args) { value, error in
-        if let error = error {
-          reject(error.code, error.description, error)
-        } else if let error = error {
-          reject("ERR_UNKNOWN_ERROR", error.localizedDescription, error)
-        } else {
+      .call(function: functionName, args: args) { result in
+        switch result {
+        case .failure(let error):
+          reject(error.code, error.description, nil)
+        case .success(let value):
           resolve(value)
         }
       }
