@@ -22,6 +22,7 @@ Package-specific changes not released in any SDK will be added here just before 
 - Updated `@stripe/stripe-react-native` from `0.2.3` to `0.6.0`. ([#16938](https://github.com/expo/expo/pull/16938) by [@kudo](https://github.com/kudo))
 - Updated `react-native-reanimated` from `2.4.1` to `2.8.0`. ([#16956](https://github.com/expo/expo/pull/16956), [#17159](https://github.com/expo/expo/pull/17159) by [@tsapeta](https://github.com/tsapeta))
 - Updated `react-native-maps` from `0.29.4` to `0.30.1`. ([#16944](https://github.com/expo/expo/pull/16944) by [@bycedric](https://github.com/bycedric))
+- Set badge count number on android by fetching the value from the notification payload content. ([#17171](https://github.com/expo/expo/pull/17171) by [@danstepanov](https://github.com/danstepanov))
 
 ### 🛠 Breaking changes
 
